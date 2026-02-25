@@ -29,8 +29,30 @@ function jogar(){
                     break;
 
         }
+
         if((document.getElementById("pedra").checked == true && sorteio == 0)
-            ||(document.getElementById("papel")checked == true && sorteio == 1)||())
+            ||(document.getElementById("papel").checked == true && sorteio == 1)
+        ||(document.getElementById("tesoura").checked == true && sorteio == 2))
+
+        {
+            document.getElementById("placar").innerHTML="EMPATE";
+        }
+            else if((document.getElementById("pedra").checked == true && sorteio == 2)
+                ||(document.getElementById("papael").checked == true && sorteio ==  0)
+                ||(document.getElementById("tesoura").checked == true && sorteio == 1))
+                {
+                    document.getElementById("placar").innerHTML = "Você venceu";
+
+            }
+
+            else{
+                document.getElementById("placar").innerHTML = "Computador venceu";
+            }
 
     }
+}
+
+function resetar(){
+    document.getElementById("pc").src="pc.png";
+    document.getElementById("placar").innerHTML=""
 }
